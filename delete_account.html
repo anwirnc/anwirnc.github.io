@@ -1,1 +1,121 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Lucky Bubble Rewards</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1, h2 {
+            color: #d32f2f;
+        }
+        .warning {
+            background-color: #ffebee;
+            border-left: 5px solid #d32f2f;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        form {
+            margin-top: 30px;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #d32f2f;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b71c1c;
+        }
+        .success {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+        .note {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Delete Your Lucky Bubble Rewards Account & Data</h1>
+
+    <p>Thank you for using Lucky Bubble Rewards. If you wish to permanently delete your account and all associated personal data, please submit your request using the form below.</p>
+
+    <div class="warning">
+        <strong>Important Notice:</strong><br>
+        • Account deletion is <strong>permanent and irreversible</strong>. All data (including rewards, progress, history, login information, etc.) will be permanently removed and cannot be recovered.<br>
+        • We usually process deletion requests within <strong>15 business days</strong> (depending on volume).<br>
+        • We may retain certain data for legitimate reasons such as legal obligations, security, fraud prevention, or compliance with applicable laws.<br>
+        • After submission, you will receive a confirmation email (please check your spam/junk folder).
+    </div>
+
+    <h2>Submit Deletion Request</h2>
+
+    <form id="deleteForm" action="https://formspree.io/f/your-form-id" method="POST">  <!-- Replace with your actual form endpoint (e.g. Formspree, Google Forms, or your backend) -->
+
+        <label for="email">Email address used for registration <strong>(required)</strong>:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter the email you used to register">
+
+        <label for="username">Username or User ID (optional, if known):</label>
+        <input type="text" id="username" name="username" placeholder="e.g. your nickname or UID">
+
+        <label for="reason">Reason for deletion (optional, helps us improve):</label>
+        <textarea id="reason" name="reason" rows="4" placeholder="e.g. no longer using the app, privacy concerns, etc..."></textarea>
+
+        <label>
+            <input type="checkbox" name="confirm" required>
+            I understand that account deletion is permanent and irreversible, and I have read the notice above.
+        </label>
+
+        <button type="submit">Submit Deletion Request</button>
+    </form>
+
+    <div id="formMessage" class="success">
+        Your request has been submitted! We will process it within 15 business days and notify you by email.
+    </div>
+
+    <div class="note">
+        <p>You can also delete your account directly in the app: Settings → Account → Delete Account (no need to reinstall the app).</p>
+        <p>If you have any questions, please contact us at: *** anwirinc@gmail.com***</p>
+        <p>Privacy Policy: <a href="https://anwirnc.github.io/Privacy_LBR.html" target="_blank">View full Privacy Policy</a></p>
+    </div>
+
+    <script>
+        // Simple frontend confirmation (actual submission handled by form action)
+        document.getElementById('deleteForm').addEventListener('submit', function(e) {
+            // e.preventDefault();  // Uncomment if you want to handle submission via JS/AJAX
+            document.getElementById('formMessage').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
